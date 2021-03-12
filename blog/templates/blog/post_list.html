@@ -7,22 +7,30 @@
             <h1><a href="">Lucian Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Welsh Corgi</a></h2>
-            <p>Welsh Corgi, Bow Wow!</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>published: {{ post.published_date }}</p>
+                <p>{{ post.text|linebreaksbr  }}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Dachshund</a></h2>
-            <p>Dachshund, Bow Wow!</p>
-        </div>
+<!--        <div>-->
+<!--            <p>published: 14.06.2014, 12:14</p>-->
+<!--            <h2><a href="">Welsh Corgi</a></h2>-->
+<!--            <p>Welsh Corgi, Bow Wow!</p>-->
+<!--        </div>-->
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Golden Retriever</a></h2>
-            <p>Golden Retriever, Bow Wow!</p>
-        </div>
+<!--        <div>-->
+<!--            <p>published: 14.06.2014, 12:14</p>-->
+<!--            <h2><a href="">Dachshund</a></h2>-->
+<!--            <p>Dachshund, Bow Wow!</p>-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--            <p>published: 14.06.2014, 12:14</p>-->
+<!--            <h2><a href="">Golden Retriever</a></h2>-->
+<!--            <p>Golden Retriever, Bow Wow!</p>-->
+<!--        </div>-->
     </body>
 </html>
